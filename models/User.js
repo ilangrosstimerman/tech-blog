@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
-const sequelize = require('../config/connection');
+const sequelize = require('../config/config');
 
 class User extends Model {
   checkPassword(loginPw) {
@@ -27,13 +27,13 @@ class User extends Model {
         len: [8],
       },
     },
-    date_created: {
+    dateCreated: {
       type: DataTypes.DATEONLY,
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },    
   },
-
+  
   {
     hooks: {
       beforeCreate: async (newUserData) => {
@@ -52,5 +52,4 @@ class User extends Model {
     modelName: 'user',
   }
 );
-
 module.exports = User;
