@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const { Post } = require('../../models/');
-const withAuth = require('../../utils/auth');router.post('/', withAuth, async (req, res) => {
+const withAuth = require('../../utils/auth');
+
+router.post('/', withAuth, async (req, res) => {
   const body = req.body;
     console.log(body);
   try {
@@ -21,6 +23,7 @@ router.put('/:id', withAuth, async (req, res) => {
         id: req.params.id,
       },
     });
+
     if (affectedRows > 0) {
       res.status(200).end();
     } else {
@@ -30,6 +33,7 @@ router.put('/:id', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const [affectedRows] = Post.destroy({
@@ -37,6 +41,7 @@ router.delete('/:id', withAuth, async (req, res) => {
         id: req.params.id,
       },
     });
+
     if (affectedRows > 0) {
       res.status(200).end();
     } else {
@@ -46,4 +51,5 @@ router.delete('/:id', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 module.exports = router;

@@ -27,11 +27,6 @@ class User extends Model {
         len: [8],
       },
     },
-    dateCreated: {
-      type: DataTypes.DATEONLY,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },    
   },
   
   {
@@ -52,4 +47,5 @@ class User extends Model {
     modelName: 'user',
   }
 );
+
 module.exports = User;
