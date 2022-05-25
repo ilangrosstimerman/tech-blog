@@ -9,7 +9,7 @@
 https://nameless-ravine-28520.herokuapp.com
 
 ## Screenshot
-![Screen Shot 2022-05-24 at 5 24 55 PM](https://user-images.githubusercontent.com/94089960/170153033-c01b1707-7c95-430a-a572-21d6ba9c2590.png)
+![Screen Shot 2022-05-24 at 5 27 25 PM](https://user-images.githubusercontent.com/94089960/170153202-ad5a0864-1677-41d0-b154-9da5900891a1.png)
 
 ## Dependencies
 - "bcrypt": "^5.0.1",
@@ -21,3 +21,4 @@ https://nameless-ravine-28520.herokuapp.com
 - "mysql2": "^2.3.3",
 - "node": "^17.7.2",
 - "sequelize": "^6.20.0"
+
